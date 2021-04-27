@@ -25,6 +25,9 @@
     "release:patch": "standard-version -- --release-as patch"
   },
   "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.13.16",
+    "@babel/preset-env": "^7.13.15",
     "standard-version": "^9.2.0"
   }
 }
