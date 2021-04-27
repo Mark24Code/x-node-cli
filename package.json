@@ -1,0 +1,30 @@
+{
+  "name": "x-node-cli",
+  "version": "1.0.0",
+  "bin": {
+    "x-cli": "./bin/index.js"
+  },
+  "main": "index.js",
+  "repository": "git@github.com:Mark24Code/x-node-cli.git",
+  "author": "Mark24Code <mark.zhangyoung@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "commander": "^7.2.0",
+    "download-git-repo": "^3.0.2",
+    "handlebars": "^4.7.7",
+    "inquirer": "^8.0.0",
+    "log-symbols": "^5.0.0",
+    "ora": "^5.4.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "release": "standard-version",
+    "release:major": "standard-version -- --release-as major",
+    "release:minor": "standard-version -- --release-as minor",
+    "release:patch": "standard-version -- --release-as patch"
+  },
+  "devDependencies": {
+    "standard-version": "^9.2.0"
+  }
+}
