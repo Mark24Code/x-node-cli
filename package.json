@@ -9,6 +9,7 @@
   "author": "Mark24Code <mark.zhangyoung@qq.com>",
   "license": "MIT",
   "dependencies": {
+    "@rollup/plugin-commonjs": "^18.0.0",
     "chalk": "^4.1.1",
     "commander": "^7.2.0",
     "download-git-repo": "^3.0.2",
@@ -21,7 +22,8 @@
     "release": "standard-version",
     "release:major": "standard-version -- --release-as major",
     "release:minor": "standard-version -- --release-as minor",
-    "release:patch": "standard-version -- --release-as patch"
+    "release:patch": "standard-version -- --release-as patch",
+    "build": "rollup -c rollup.config.js"
   },
   "devDependencies": {
     "rollup": "^2.45.2",

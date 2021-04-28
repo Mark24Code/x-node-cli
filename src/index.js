@@ -6,7 +6,7 @@ const handlebars = require('handlebars');
 const inquirer = require('inquirer');
 const ora = require('ora');
 const chalk = require('chalk');
-const target = require('./repo');
+const target = require('./repo.js');
 
 const symbols = {
   success: "[success]",
