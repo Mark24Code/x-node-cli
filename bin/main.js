@@ -1,3 +1,6 @@
+#!/usr/bin/env node
+
+'use strict';
 
 const fs = require('fs');
 const program = require('commander');
@@ -11,7 +14,7 @@ const target = require('./repo');
 const symbols = {
   success: "[success]",
   error: "[error]"
-}
+};
 
 program.version('1.0.0', '-v, --version')
   .command('init <name>')
@@ -40,7 +43,7 @@ program.version('1.0.0', '-v, --version')
               name,
               description: answers.description,
               author: answers.author
-            }
+            };
             if (fs.existsSync(fileName)) {
               const content = fs.readFileSync(fileName).toString();
               const result = handlebars.compile(content)(meta);
@@ -48,11 +51,11 @@ program.version('1.0.0', '-v, --version')
             }
             console.log(symbols.success, chalk.green('项目初始化完成'));
           }
-        })
-      })
+        });
+      });
     } else {
       // 错误提示项目已存在，避免覆盖原有项目
       console.log(symbols.error, chalk.red('项目已存在'));
     }
-  })
+  });
 program.parse(process.argv);
