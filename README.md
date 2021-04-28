@@ -1,8 +1,15 @@
-# x-node-cli
+# 🚀 Welcome to your new awesome project!
 
-用node实现的cli模板，可以任意给x项目使用
+This project has been created using **webpack-cli**, you can now run
 
+```
+npm run build
+```
 
-# 个性化说明
+or
 
-可执行命令名称，修改 package.json中bin对象的value
+```
+yarn build
+```
+
+to bundle your application

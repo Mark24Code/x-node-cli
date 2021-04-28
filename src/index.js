@@ -6,7 +6,12 @@ const handlebars = require('handlebars');
 const inquirer = require('inquirer');
 const ora = require('ora');
 const chalk = require('chalk');
-const symbols = require('log-symbols');
+const target = require('./repo');
+
+const symbols = {
+  success: "[success]",
+  error: "[error]"
+}
 
 program.version('1.0.0', '-v, --version')
   .command('init <name>')
@@ -24,7 +29,7 @@ program.version('1.0.0', '-v, --version')
       ]).then((answers) => {
         const spinner = ora('正在下载模板...');
         spinner.start();
-        download('http://xxxxxx:9999:HTML5/H5Template#master', name, { clone: true }, (err) => {
+        download(target, name, { clone: true }, (err) => {
           if (err) {
             spinner.fail();
             console.log(symbols.error, chalk.red(err));

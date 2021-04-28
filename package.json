@@ -1,8 +1,8 @@
 {
-  "name": "x-node-cli",
+  "name": "my-webpack-project",
   "version": "1.0.0",
   "bin": {
-    "x-cli": "./bin/index.js"
+    "x-cli": "./src/index.js"
   },
   "main": "index.js",
   "repository": "git@github.com:Mark24Code/x-node-cli.git",
@@ -14,20 +14,16 @@
     "download-git-repo": "^3.0.2",
     "handlebars": "^4.7.7",
     "inquirer": "^8.0.0",
-    "log-symbols": "^5.0.0",
     "ora": "^5.4.0"
   },
   "scripts": {
-    "test": "jest",
     "release": "standard-version",
     "release:major": "standard-version -- --release-as major",
     "release:minor": "standard-version -- --release-as minor",
     "release:patch": "standard-version -- --release-as patch"
   },
   "devDependencies": {
-    "@babel/cli": "^7.13.16",
-    "@babel/core": "^7.13.16",
-    "@babel/preset-env": "^7.13.15",
     "standard-version": "^9.2.0"
-  }
+  },
+  "description": "x node cli template"
 }
